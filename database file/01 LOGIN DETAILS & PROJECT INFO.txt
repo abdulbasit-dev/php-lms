@@ -4,8 +4,11 @@
 - You can register yourself and verify the membership request using
 Librarian's Account in order to continue!
 
+Username: jane
+Password: password
+
 
 **Login Details - Librarian**
 
 Username: sara
-Password: librarian
+Password: password
