@@ -29,11 +29,11 @@
 				$row = mysqli_fetch_array($result);
 				$to = $row[1];
 				$message = "This is a reminder to return the book '".$row[3]."' with ISBN ".$row[2]." to the library.";
-				if(mail($to, $subject, $message, $header) != FALSE)
-				{
-					$idArray[$i] = $row[0];
-					$successfulEmails++;
-				}
+				// if(mail($to, $subject, $message, $header) != FALSE)
+				// {
+				// 	$idArray[$i] = $row[0];
+				// 	$successfulEmails++;
+				// }
 			}
 			
 			mysqli_next_result($con);

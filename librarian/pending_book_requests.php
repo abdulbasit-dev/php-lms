@@ -95,7 +95,7 @@
 						$due_date = mysqli_fetch_array($query->get_result())[0];
 						$message = "The book '".$title."' with ISBN ".$isbn." has been issued to your account. The due date to return the book is ".$due_date.".";
 						
-						mail($to, $subject, $message, $header);
+						// mail($to, $subject, $message, $header);
 					}
 				}
 				if($requests > 0)
@@ -138,7 +138,7 @@
 						if(!$query->execute())
 							die(error_without_field("ERROR: Couldn\'t delete values"));
 						
-						mail($to, $subject, $message, $header);
+						// mail($to, $subject, $message, $header);
 					}
 				}
 				if($requests > 0)

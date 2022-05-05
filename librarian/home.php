@@ -40,9 +40,9 @@
 				<input type="button" value="Update Balance of Members" />
 			</a><br />
 
-			<a href="due_handler.php">
+			<!-- <a href="due_handler.php">
 				<input type="button" value="Today's Reminder" />
-			</a><br /><br />
+			</a><br /><br /> -->
 
 		</div>
 	</body>

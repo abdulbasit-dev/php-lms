@@ -69,10 +69,11 @@ if (isset($_POST['m_register'])) {
             else {
                 $query = $con->prepare("INSERT INTO pending_registrations(username, password, name, email, balance) VALUES(?, ?, ?, ?, ?);");
                 $hashedPassword = sha1($_POST['m_pass']);
-                $query->bind_param("ssssd", $_POST['m_user'],$hashedPassword , $_POST['m_name'], $_POST['m_email'], $_POST['m_balance']);
-                if ($query->execute())
+                $query->bind_param("ssssd", $_POST['m_user'], $hashedPassword, $_POST['m_name'], $_POST['m_email'], $_POST['m_balance']);
+                if ($query->execute()) {
+                    // header("Location:index.php");
                     echo success("Details submitted, soon you'll will be notified after verifications!");
-                else
+                } else
                     echo error_without_field("Couldn\'t record details. Please try again later");
             }
         }

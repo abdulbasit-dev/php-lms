@@ -19,7 +19,7 @@
 			$result = $query->get_result();
 			$rows = mysqli_num_rows($result);
 			if($rows == 0)
-				echo "<h2 align='center'>None at the moment!</h2>";
+				echo "<h2 align='center'>None Pending Member found!</h2>";
 			else
 			{
 				echo "<form class='cd-form' method='POST' action='#'>";
@@ -81,10 +81,10 @@
 							die(error_without_field("ERROR: Couldn\'t insert values"));
 						$members++;
 						
-						$to = $row[3];
-						$subject = "Library membership has been accepted";
-						$message = "Your membership has been accepted by the library. You can now issue books using your account.";
-						mail($to, $subject, $message, $header);
+						// $to = $row[3];
+						// $subject = "Library membership has been accepted";
+						// $message = "Your membership has been accepted by the library. You can now issue books using your account.";
+						// mail($to, $subject, $message, $header);
 					}
 				}
 				if($members > 0)

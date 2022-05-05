@@ -30,7 +30,7 @@ require "../header.php";
         </div>
 
         <div class="icon">
-            <input class="l-pass" type="password" name="l_pass" placeholder="Password" required value="librarian" />
+            <input class="l-pass" type="password" name="l_pass" placeholder="Password" required value="password" />
         </div>
 
         <input type="submit" value="Login" name="l_login" />
@@ -53,7 +53,6 @@ if (isset($_POST['l_login'])) {
     else {
         session_destroy();
         session_start();
-        echo $query->get_result()[0];
         $_SESSION['type'] = "librarian";
         $_SESSION['id'] = $query->get_result()[0];
         $_SESSION['username'] = $_POST['l_user'];
