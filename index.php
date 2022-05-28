@@ -17,12 +17,14 @@
 	</head>
 	<body>
 		<div id="allTheThings">
+
 			<div id="member">
 				<a href="member">
 					<img src="img/ic_membership.svg" width="250px" height="auto"/><br />
 					&nbsp;Member Login
 				</a>
 			</div>
+            
 			<div id="verticalLine">
 				<div id="librarian">
 					<a id="librarian-link" href="librarian">
@@ -31,6 +33,7 @@
 					</a>
 				</div>
 			</div>
+            
 		</div>
 	</body>
 </html>

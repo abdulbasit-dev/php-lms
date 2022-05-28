@@ -1,8 +1,8 @@
 <?php
 require "../db_connect.php";
+require "../header.php";
 require "../message_display.php";
 require "../verify_logged_out.php";
-require "../header.php";
 ?>
 
 <html>
@@ -55,6 +55,7 @@ if (isset($_POST['m_login'])) {
         echo error_without_field("Invalid details or Account has not been activated yet!");
     else {
         $resultRow = mysqli_fetch_array($result);
+        print_r($resultRow);
         $balance = $resultRow[1];
         if ($balance < 0) {
             echo error_without_field("Your account has been suspended. Please contact librarian for further information!");
